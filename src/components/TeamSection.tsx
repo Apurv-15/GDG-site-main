@@ -161,40 +161,7 @@ export default function TeamSection() {
                         <TeamMemberCard key={m.name} m={m} i={i} />
                     ))}
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="relative bg-[#141514] bg-gradient-to-br from-[#1a1b1a] to-[#0d0e0d] rounded-[40px] p-10 flex flex-col justify-between h-full min-h-[440px] shadow-2xl overflow-hidden border border-white/5 mt-12 lg:mt-24"
-                    >
-                        <div>
-                            <div className="w-10 h-10 bg-[#B6FF00] mb-8 shadow-[0_0_20px_rgba(182,255,0,0.4)]" />
-                            <div className="flex flex-col gap-4">
-                                <h3 className="text-[32px] font-polysans-wide font-bold text-white tracking-tighter leading-[1.1]">
-                                    We're Searching <br /> For Talents
-                                </h3>
-                                <p className="text-[15px] text-white/40 font-medium leading-relaxed">
-                                    Join our team of creatives pushing boundaries, experimenting with ideas.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div className="mt-8 group cursor-pointer z-10">
-                            <div className="flex items-center gap-3 bg-white/5 backdrop-blur-xl rounded-2xl p-2 border border-white/10 group-hover:bg-white transition-all duration-500">
-                                <div className="w-12 h-12 bg-[#B6FF00] rounded-xl flex items-center justify-center overflow-hidden">
-                                    <div className="grid grid-cols-2 gap-1 px-3 opacity-40 group-hover:opacity-100">
-                                        <div className="w-1 h-1 bg-black" />
-                                        <div className="w-1 h-1 bg-black" />
-                                        <div className="w-1 h-1 bg-black" />
-                                        <div className="w-1 h-1 bg-black" />
-                                    </div>
-                                </div>
-                                <span className="text-white group-hover:text-black font-polysans-bold font-extrabold tracking-tight pr-4">Apply Now</span>
-                            </div>
-                        </div>
-
-                        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-grid-pattern" />
-                    </motion.div>
                 </div>
             </div>
         </section>

@@ -75,10 +75,10 @@ export default function GDGNavbar() {
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 pt-4 md:pt-5 pointer-events-none`}
       aria-label="Main navigation"
     >
-      <div className="max-w-[1440px] mx-auto px-4 md:px-[60px] flex items-center justify-between pointer-events-auto">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[60px] flex md:grid md:grid-cols-3 items-center justify-between pointer-events-auto">
 
         {/* LEFT: LOGO PILL */}
-        <Link to="/" aria-label="GDG VIT Mumbai Home" className="relative z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B6FF00] rounded-full">
+        <Link to="/" aria-label="GDG VIT Mumbai Home" className="relative z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B6FF00] rounded-full justify-self-start flex">
           <motion.div
             whileHover={{ scale: 1.05 }}
             className={`flex items-center gap-2.5 px-2 md:px-3 py-2 rounded-full border transition-colors duration-500 ${glassClass}`}
@@ -112,7 +112,7 @@ export default function GDGNavbar() {
         {/* CENTER: NAV LINKS PILL */}
         <div
           ref={navContainerRef}
-          className={`hidden md:flex items-center p-1.5 rounded-full border transition-colors duration-500 relative ${glassClass}`}
+          className={`hidden md:flex items-center p-1.5 rounded-full border transition-colors duration-500 relative ${glassClass} justify-self-center`}
         >
           {/* Active Link Blob Background */}
           <motion.div
@@ -181,15 +181,8 @@ export default function GDGNavbar() {
         </div>
 
         {/* RIGHT: JOIN BUTTON & MOBILE MENU TOGGLE */}
-        <div className="flex items-center gap-3 md:gap-4 relative z-10">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`hidden md:flex items-center gap-2 text-[13px] font-bold px-6 py-3.5 rounded-full transition-all duration-500 border group ${glassClass} hover:border-[#B6FF00]/50`}
-          >
-            Join Us!
-            <ArrowRight className="w-4 h-4 text-[#B6FF00] transition-transform group-hover:translate-x-1" />
-          </motion.button>
+        <div className="flex items-center gap-3 md:gap-4 relative z-10 justify-self-end">
+
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -252,12 +245,7 @@ export default function GDGNavbar() {
                   </Link>
                 );
               })}
-              <button
-                className={`mt-8 w-full font-black py-4 rounded-full text-lg uppercase tracking-widest shadow-xl transition-colors ${showDark ? 'bg-[#B6FF00] text-black hover:bg-[#a1e600]' : 'bg-black text-white hover:bg-gray-800'
-                  }`}
-              >
-                Join Community
-              </button>
+
             </div>
           </motion.div>
         )}

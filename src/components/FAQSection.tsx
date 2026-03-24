@@ -9,7 +9,7 @@ const faqs = [
     },
     {
         q: 'How do I become a member of GDG VITM?',
-        a: "You can apply through our website by clicking 'Join Us'. We review applications on a rolling basis and reach out to shortlisted candidates for a brief onboarding session.",
+        a: "Follow us on our social media handles and keep an eye on our announcements. We post recruitment calls and application forms there whenever we're looking for new members.",
     },
     {
         q: 'What kind of events does GDG VITM organise?',
